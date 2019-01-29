@@ -104,6 +104,7 @@ public class TflitePlugin implements MethodCallHandler {
     try {
       br = new BufferedReader(new InputStreamReader(assetManager.open(path)));
       String line;
+      labels = new Vector<>();
       while ((line = br.readLine()) != null) {
         labels.add(line);
       }
